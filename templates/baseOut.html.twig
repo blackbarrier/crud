@@ -12,22 +12,34 @@
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        
+        {% endblock %}        
     </head>
+
     <body>
+
+
         
         <div class="header">
             <img src="{{asset('prov.png')}}" alt="Buenos Aires Provincia">
-        
-        </div>               
+            {% block nav %}                
+            {% endblock %}        
+        </div>  
 
-                <div class="main" style="width: 80%">
-                    {% block main %}
-                        
-                    {% endblock %}        
-                </div>
+
+        <div class="encabezado">
+            {% block encabezado %}           
+            {% endblock %}
+        </div>           
+
+                 
+
+        <div class="main">
+            {% block main %}
+             
+            {% endblock %}            
+        </div>      
+
+
 
         <div class="footer">
             <p> <a href="https://www.gba.gob.ar/gobierno">Ministerio de Gobierno - Provincia de Buenos Aires</a></p>
@@ -43,6 +55,7 @@
             $('#table').DataTable();
         });
         </script>
+       
         {% block javascripts %}
         {% endblock %}
     

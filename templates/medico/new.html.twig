@@ -3,13 +3,14 @@
 {% block title %}Alta medico{% endblock %}
 
 {% block encabezado %}
-    Alta medico
+    Alta medico    
 {% endblock %}
 
 {% block main %}
-<div style="max-width: 60%; margin:auto; box-sizing: border-box;">
+    <div style="max-width: 60%; margin:auto;">
+        {{ include('medico/_form.html.twig') }}    
+    </div>
 
-    {{ include('medico/_form.html.twig') }}
-    
-</div>
 {% endblock %}
+
+
