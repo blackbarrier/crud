@@ -1,25 +1,26 @@
     {{ form_start(form) }}
-    <div class="form-floating mb-3">
-        {{ form_widget(form.Nombre, {'attr': {'class': 'form-control', 'id': "floatingInput"}}) }}
-        {{ form_label(form.Nombre, 'Nombre:', {'label_attr': {'for': "floatingInput"}}) }}     
-    </div>
+    
+        <div class="form-floating mb-3">
+            {{ form_widget(form.Nombre, {'attr': {'class': 'form-control', 'id': "floatingInput"}}) }}
+            {{ form_label(form.Nombre, 'Nombre:', {'label_attr': {'for': "floatingInput"}}) }}     
+        </div>
 
-    <div class="form-floating mb-3">
-        {{ form_widget(form.dni, {'attr': {'class': 'form-control', 'id': "floatingInput"}}) }}
-        {{ form_label(form.dni, 'Dni:', {'label_attr': {'for': "floatingInput"}}) }}     
-    </div>
+        <div class="form-floating mb-3">
+            {{ form_widget(form.dni, {'attr': {'class': 'form-control', 'id': "floatingInput"}}) }}
+            {{ form_label(form.dni, 'Dni:', {'label_attr': {'for': "floatingInput"}}) }}     
+        </div>
 
-    <div class="form-floating mb-3">    
+        <div class="form-floating mb-3">    
+            
+            {{ form_widget(form.sexo)}}
         
-        {{ form_widget(form.sexo)}}
-     
-    </div> 
+        </div> 
 
-    <div class="form-floating mb-3">
-        {{ form_widget(form.fNac, {'attr': {'class': 'form-control', 'id': "floatingInput"}}) }}
-        {# {{ form_label(form.fNac, 'Fecha de Medico:', {'label_attr': {'for': "floatingInput"}}) }} #}
-    </div>
-
+        <div class="form-floating mb-3">
+            {{ form_widget(form.fNac, {'attr': {'class': 'form-control', 'id': "floatingInput"}}) }}
+            {# {{ form_label(form.fNac, 'Fecha de Medico:', {'label_attr': {'for': "floatingInput"}}) }} #}
+        </div>
+   
           
     <button class="btn btn-primary">{{ button_label|default('Guardar') }}</button>
 
